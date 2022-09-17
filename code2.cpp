@@ -3,7 +3,7 @@ int green_light_pin = 4;
 int blue_light_pin = 5;
 int red_control = 6, blue_control = 7, green_control = 8, plus = 9, minus = 10;
 bool increase = true;
-
+int red = 0, green = 0, blue = 0;
 
 void setup() {
   RGB_color(0, 0, 0);
@@ -26,7 +26,7 @@ void RGB_color(int red_light_value, int green_light_value, int blue_light_value)
   analogWrite(green_light_pin, green_light_value);
   analogWrite(blue_light_pin, blue_light_value);
 }
-void RGB_control(int red = 0, int green = 0, int blue = 0)
+void RGB_control()
 {
   if(red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255 &&)
   {
